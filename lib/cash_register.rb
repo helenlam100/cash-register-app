@@ -1,7 +1,17 @@
 class CashRegister
 
-  def initialize
-    @total = 0
+  attr_reader :total
+  #def total
+  #@total
+  #end
+  #
+  #attr_accessor
+  # def total(new_total)
+  #   @total == new_total
+  # end
+
+  def initialize(total = 0)
+    @total = total
   end
 
   def total

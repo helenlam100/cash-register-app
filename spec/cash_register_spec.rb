@@ -2,9 +2,17 @@ require 'cash_register'
 
 describe CashRegister do
 
+  describe "initialization" do
+    it 'takes an initial amount' do
+      cash_register = CashRegister.new(74.32)
+
+      expect(cash_register.total).to eq(74.32)
+    end
+  end 
+
   describe "#total" do
     it 'starts at 0' do        #describe
-      cash_register = CashRegister.new  #instantiating a new class
+      cash_register = CashRegister.new  #instantiate a new class
 
       total = cash_register.total   #do the thing you're testing
 
